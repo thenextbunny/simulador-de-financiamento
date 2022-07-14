@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Financiamento</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Simulador de Financiamento com Sistema de Armotização Constante (SAC)</h1>
+        <form>
+            <div class="box">
+                <label for="value">Valor de Financiamento</label>
+                <input type="text" name="value" id="value">
+            </div>
+            <div class="box">
+                <label for="entry">Valor de entrada</label>
+                <input type="text" name="entry" id="entry">
+            </div>
+            <div class="box">
+                <label for="interest">Taxa de juros mensal em %</label>
+                <input type="text" name="interest" id="interest">
+            </div>
+            <div class="box">
+                <label for="deadline">Prazo (em meses)</label>
+                <input type="text" name="deadline" id="deadline">
+            </div>
+            <div class="box">
+                <label for="lack">
+                    <input type="checkbox" name="lack" id="lack">
+                    Deseja carência?
+                </label>       
+                <select name="lack-select" id="lack-select" hidden>
+                    <option value="2">2 meses</option>
+                    <option value="3">3 meses</option>
+                    <option value="4">4 meses</option>
+                </select>
+            </div>
+            <div class="box">
+                <button type="button" id="calculate">Calcular</button>
+            </div>
+        </form>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Valor</th>
+                        <th>Armotização</th>
+                        <th>Juros</th>
+                        <th>Saldo devedor</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="./assets/javascript/main.js" type="module"></script>
+</body>
+</html>
